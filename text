@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+Permission denied publickey then use these commands it will works fine
+git remote rm origin
+Add ssh url
+
+git remote add origin git@github.com:<username>/<repo>.git
+Generate ssh key inside .ssh/ folder. It will ask for path and passphrase where you can just press enter and proceed.
+
+cd ~/.ssh
+ssh-keygen
+Copy the key. You can view your key using -
+
+cat ~/.ssh/id_rsa.pub
+If you hadn't specified a different path then this will be the default path.
+
+Add this key to your github account.
+
+Next do -
+
+ssh -T git@github.com
+You will get a welcome message in your console.
+
+cd into to your project folder. git push -u origin master now works!
+
+
+
+
